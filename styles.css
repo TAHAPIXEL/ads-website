@@ -1,0 +1,111 @@
+/* لود فونت وزیر از گوگل */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap');
+
+/* استایل کلی صفحه */
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background: url('background.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center; /* متن‌ها وسط‌چین */
+    direction: rtl; /* راست‌چین کردن */
+    color: white;
+}
+
+/* استایل فرم ورود */
+.login-container {
+    background: rgba(255, 255, 255, 0.301); /* تیره‌تر برای نمایش بهتر */
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    width: 380px; /* افزایش عرض برای جلوگیری از بهم‌ریختگی */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* استایل تیتر */
+.login-container h2 {
+    margin-bottom: 15px;
+    color: white;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+/* استایل ورودی‌ها */
+.login-container input {
+    width: calc(100% - 20px); /* جلوگیری از بیرون زدن */
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    outline: none;
+    text-align: right; /* متن راست‌چین */
+    font-family: 'Vazirmatn', sans-serif;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* دکمه ورود */
+.login-container button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login-container button:hover {
+    background: #0056b3;
+}
+
+/* استایل اعلان‌ها */
+.custom-alert {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+/* رنگ‌بندی اعلان‌ها */
+.custom-alert.success {
+    background: #28a745; /* سبز */
+}
+
+.custom-alert.error {
+    background: #dc3545; /* قرمز */
+}
+
+/* نمایش اعلان با انیمیشن */
+.custom-alert.show {
+    top: 20px;
+    opacity: 1;
+}
+
+/* محو شدن اعلان */
+.custom-alert.hide {
+    top: -100px;
+    opacity: 0;
+}

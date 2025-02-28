@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>ثبت آگهی</title>
+    <link rel="stylesheet" href="styles-submit.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>📝 ثبت آگهی جدید</h2>
+        <form class="submit-form">
+            <label for="title">📌 عنوان آگهی:</label>
+            <input type="text" id="title" required>
+
+            <label for="description">📝 توضیحات:</label>
+            <textarea id="description" required></textarea>
+
+            <label for="price">💰 قیمت (تومان):</label>
+            <input type="number" id="price" required>
+
+            <label for="file" class="file-label">
+                <i class="fas fa-upload"></i> انتخاب فایل
+            </label>
+            <input type="file" id="file" class="file-input" multiple>
+            <span class="file-name">هیچ فایلی انتخاب نشده</span>
+            
+            <button type="submit">✅ ثبت آگهی</button>
+        </form>
+    </div>
+
+    <script src="submit.js"></script>
+    <div id="notification" class="notification">آگهی شما با موفقیت ثبت شد! ✅</div>
+
+</body>
+</html>
